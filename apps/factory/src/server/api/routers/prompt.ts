@@ -70,7 +70,6 @@ export const promptRouter = createTRPCRouter({
         where: query,
       });
       console.log(`package -------------- ${JSON.stringify(pkg)}`);
-      // console.log(pkg);
       return pkg;
     }),
 
