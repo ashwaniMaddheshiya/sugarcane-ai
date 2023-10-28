@@ -34,8 +34,6 @@ import { VersionOutput, VersionSchema } from "~/validators/prompt_version";
 import { PromptEnvironment, promptEnvironment } from "~/validators/base";
 import LogLabel from "./dataset/log_label";
 import { GenerateInput, GenerateOutput } from "~/validators/service";
-
-const isDev = process.env.NODE_ENV === "development";
 import LabelIcons from "./label_icon";
 import { LogOutput } from "~/validators/prompt_log";
 import _debounce from "lodash/debounce";
@@ -44,6 +42,8 @@ import {
   ModelTypeSchema,
   ModelTypeType,
 } from "~/generated/prisma-client-zod.ts";
+
+const isDev = process.env.NODE_ENV === "development";
 
 function PromptVersion({
   ns,
