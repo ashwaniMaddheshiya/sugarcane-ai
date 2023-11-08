@@ -26,10 +26,10 @@ export const createPackageInput = z
     name: z
       .string()
       .min(3, {
-        message: "Name must be at least 3 characters long.",
+        message: "Name must be atleast 3 characters long.",
       })
       .max(30, {
-        message: "Name must be at most 30 characters long.",
+        message: "Name must be atmost 30 characters long.",
       })
       .regex(/^[a-z0-9-]+$/, {
         message:
@@ -39,7 +39,9 @@ export const createPackageInput = z
       .refine((value) => !RESERVED_NAMES.includes(value), {
         message: "This name is reserved.",
       }),
-    description: z.string(),
+    description: z.string().min(100, {
+      message: "Description must be atleast 100 characters long",
+    }),
     visibility: packageVisibility,
   })
   .strict()

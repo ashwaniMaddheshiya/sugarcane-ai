@@ -84,7 +84,7 @@ export function CreatePackage({
 
       <Dialog open={isOpen} onClose={handleClose} fullWidth maxWidth="sm">
         <DialogTitle>
-          <Typography variant="h6">New Prompt Package</Typography>
+          <Typography variant="h6">Create New Prompt Package</Typography>
         </DialogTitle>
         <DialogContent>
           <DialogContentText></DialogContentText>
